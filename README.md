@@ -7,27 +7,27 @@ Create a git repo from scratch or add an existing setup to betterBuster.
 
 *Generate Static Pages. Preview. Deploy to Github Pages.*
 
-## The interface
+# The interface
 
-```setup```
-Use if you currently do not have a git repo created on your machine. ```setup``` creates a git repo for you adds site to the sites config to use later. 
+`setup`
+Use if you currently do not have a git repo created on your machine. `setup` creates a git repo for you adds site to the sites config to use later. 
 
-```add```
-Like ```setup``` but use this if you already have a git repo created.
+`add`
+Like `setup` but use this if you already have a git repo created.
 
-```remove```
+`remove`
 Removes existing site from your site config file. 
 
-```generate```
-Generates static pages from locally running Ghost instance.
+`generate`
+Generates static HTML files from your locally running Ghost instance so you can then push up to GitHub pages.
 
-```preview```
-Preview what's generated on ```localhost:9000```.
+`preview`
+Before deploying to GitHub pages, preview your changes locally on `localhost:9000`.
 
-```deploy```
-Commits and deploys changes static files to Github repository. Make sure to run `generate` before this.
+`deploy`
+Commits and pushes git changes to GitHub repository on the appropriate branch. *Make sure to run `generate` before this.*
 
-```add-domain```
+`add-domain`
 Adds CNAME file to local directory where site is located to allow a custom domain on your ghost blog.
 
 ## Installation
@@ -39,8 +39,8 @@ Adds CNAME file to local directory where site is located to allow a custom domai
 
 ## Requirements
 
-* wget: Use ```brew install wget``` to install wget on your Mac.
-  *Available by default on most linux distributions.*
+* wget: Use `brew install wget` to install wget on your Mac.
+  *wget is available by default on most linux distributions.*
   
 * [bundler](http://bundler.io/)
 
