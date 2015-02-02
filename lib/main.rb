@@ -1,5 +1,5 @@
 require 'docopt'
-doc = <<DOCOPT
+DOC = <<DOCOPT
 Ghost Buster. Static site generator for Ghost
 
 Usage:
@@ -27,13 +27,17 @@ DOCOPT
 
 docopt_args = {}
 
-begin
-  require 'pp'
-  require_relative 'betterBuster'
-  require_relative 'version'
-  docopt_args = Docopt::docopt(doc, version: Version.get_version)
-rescue Docopt::Exit => e
-  puts e.message
-end
+class BetterBusterMain
+  def self.main
+    begin
+      require 'pp'
+      require_relative 'betterBuster'
+      require_relative 'version'
+      docopt_args = Docopt::docopt(DOC, version: Version.get_version)
+    rescue Docopt::Exit => e
+      puts e.message
+    end
 
-puts doc unless BetterBuster.main(docopt_args)
+    puts DOC unless BetterBuster.main(docopt_args)
+  end
+end

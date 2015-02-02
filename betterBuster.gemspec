@@ -11,8 +11,8 @@ Gem::Specification.new do |spec|
   spec.description = File.read('README.md')
   spec.homepage = 'https://github.com/levibostian/betterBuster'
   spec.license = 'MIT'
-  spec.files = ['lib/betterBuster.rb']
-  spec.executables = ['bin/betterBuster']
+  spec.files = Dir['lib/*.rb']
+  spec.executables = ['betterBuster']
   spec.test_files = ['tests/test_betterBuster.rb']
   spec.require_paths = ['lib']
 end

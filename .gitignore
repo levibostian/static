@@ -1,6 +1,8 @@
 # manually added
 *~
 .idea/
+lib/#*
+lib/.#*
 
 .project
 
