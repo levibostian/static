@@ -1,10 +1,6 @@
 # manually added
 *~
-.idea/
-lib/#*
-lib/.#*
-
-.project
+.emacs*
 
 *.gem
 *.rbc
