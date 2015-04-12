@@ -18,7 +18,7 @@ class Buster
       repo.config('user.email', git_email)
     end
     
-    File.open(File.join(dir, 'README.md'), 'w') {|f| f.write('# \n\n Powered by [Ghost](http://ghost.org).\n')}
+    File.open(File.join(dir, 'README.md'), 'w') {|f| f.write("# #{name}\n")}
     
     repo.add(:all => true)
     repo.commit('Initial commit. Add README.md.')

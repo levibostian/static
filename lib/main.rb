@@ -3,14 +3,14 @@ doc = <<DOCOPT
 Ghost Buster. Static site generator for Ghost
 
 Usage:
-  buster setup (--name=<config-name>) (--repo=<repo-url>) (--dir=<path>) [--local-url=<url>] [--domain=<url>] [--git-email=<git-name>] [--git-name=<name>]
-  buster add (--name=<config-name>) (--repo=<repo-url>) (--dir=<path>) [--local-url=<url>] [--domain=<url>]
-  buster remove [--site=<config-name>]
-  buster generate  [--site=<config-name>]
-  buster preview [--site=<config-name>]
-  buster deploy [--site=<config-name>]
+  buster setup (--name=<config-name>) (--repo=<repo-url>) (--dir=<path>) (--local-url=<url>) [--domain=<url>] [--git-email=<git-name>] [--git-name=<name>]
+  buster add (--name=<config-name>) (--repo=<repo-url>) (--dir=<path>) (--local-url=<url>) [--domain=<url>]
+  buster remove (--site=<config-name>)
+  buster generate (--site=<config-name>)
+  buster preview (--site=<config-name>)
+  buster deploy (--site=<config-name>)
   buster list
-  buster add-domain <domain-name> [--site=<config-name>]
+  buster add-domain <domain-name> (--site=<config-name>)
   buster (-h | --help)
   buster (-v | --version)
 Options:
