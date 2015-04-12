@@ -1,7 +1,7 @@
-require './lib/betterBuster.rb'
+require './lib/static.rb'
 require 'test/unit'
 
-class TestBetterBuster < Test::Unit::TestCase
+class TestStatic < Test::Unit::TestCase
   
   def test_sample
     assert_equal(4, 2+2)

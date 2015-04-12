@@ -1,4 +1,4 @@
-class Buster
+class Static
   require_relative 'site_config'
   require 'webrick'
   require 'git'

@@ -1,5 +1,5 @@
-class BetterBuster # TODO this needs to require buster.rb
-  require_relative 'buster'
+class StaticDelegator
+  require_relative 'static'
   
   def self.main(docopt_args)
     if docopt_args['setup']
@@ -8,7 +8,7 @@ class BetterBuster # TODO this needs to require buster.rb
       if go_on != 'Y' && go_on != 'y'
         return
       end
-      Buster.setup(docopt_args['--name'],
+      Static.setup(docopt_args['--name'],
                    docopt_args['--repo'],
                    docopt_args['--dir'],
                    docopt_args['--local-url'],
@@ -17,36 +17,36 @@ class BetterBuster # TODO this needs to require buster.rb
                    docopt_args['--git-name'])
       
     elsif docopt_args['generate']
-      Buster.generate(get_docopt_arg(docopt_args, '--site')) 
+      Static.generate(get_docopt_arg(docopt_args, '--site')) 
       
     elsif docopt_args['preview']
       puts 'Serving at port 9000'
-      Buster.preview(get_docopt_arg(docopt_args, '--site'))
+      Static.preview(get_docopt_arg(docopt_args, '--site'))
       
     elsif docopt_args['deploy']
       puts 'Enter commit message:'
       commit_message = STDIN.gets
-      Buster.deploy(get_docopt_arg(docopt_args, '--site'), commit_message)
+      Static.deploy(get_docopt_arg(docopt_args, '--site'), commit_message)
       puts 'deployed'
       
     elsif docopt_args['list']
-      sites_list = Buster.get_list
+      sites_list = Static.get_list
       if sites_list != ''
         puts sites_list
       end
       
     elsif docopt_args['add']
-      Buster.add(docopt_args['--name'],
+      Static.add(docopt_args['--name'],
                  docopt_args['--repo'],
                  docopt_args['--dir'],
                  docopt_args['--domain'],
                  docopt_args['--local-url'])
       
     elsif docopt_args['remove']
-      Buster.remove(get_docopt_arg(docopt_args, '--site'))
+      Static.remove(get_docopt_arg(docopt_args, '--site'))
       
     elsif docopt_args['add-domain']
-      Buster.add_domain(docopt_args['<domain-name>'], get_docopt_arg(docopt_args, '--site'))      
+      Static.add_domain(docopt_args['<domain-name>'], get_docopt_arg(docopt_args, '--site'))      
     else
       false
     end

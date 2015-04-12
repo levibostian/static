@@ -2,7 +2,7 @@ class SiteConfig
   require 'json'
   require 'fileutils'
 
-  CONFIG_DIR = File.expand_path('~/.config/betterBuster/')
+  CONFIG_DIR = File.expand_path('~/.config/static/')
   CONFIG_FILENAME = 'sites_config.json'
   CONFIG_FILE = File.join(CONFIG_DIR, CONFIG_FILENAME)
 

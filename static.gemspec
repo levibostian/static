@@ -3,16 +3,13 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name = 'betterBuster'
+  spec.name = 'static'
   spec.version = '1.0'
   spec.authors = ['Levi Bostian']
   spec.email = ['levi.bostian@gmail.com']
-  spec.summary = %q{Static page generator for Ghost blog platform}
+  spec.summary = %q{Static website generator to push dynamic website to GitHub pages for static hosting.}
   spec.description = File.read('README.md')
-  spec.homepage = 'https://github.com/levibostian/betterBuster'
+  spec.homepage = 'https://github.com/levibostian/static'
   spec.license = 'MIT'
-  spec.files = ['lib/betterBuster.rb']
-  spec.executables = ['bin/betterBuster']
-  spec.test_files = ['tests/test_betterBuster.rb']
   spec.require_paths = ['lib']
 end
