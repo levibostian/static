@@ -4,6 +4,8 @@ Static website generator to push dynamic website to GitHub pages for static host
 
 *Generate Static Pages from existing static/dynamic website. Preview. Deploy to GitHub Pages.*
 
+![logo](logo.png)
+
 # The interface
 
 `setup`
