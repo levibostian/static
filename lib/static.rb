@@ -53,7 +53,9 @@ class Static
     checkout_branch(repo, SiteConfig.get_repo_url(name)) # Checkout branch now instead of stash later.
 
     command = "wget \\" +
-      "--recursive \\" + # follow links to download entire site
+#      "--recursive \\" + # follow links to download entire site
+      "--adjust-extension \\" + # save HTML/CSS docs with proper extension
+      "--span-hosts \\" + # download external hosted docs (from CDN)
       "--convert-links \\" + # make links relative
       "--page-requisites \\" + # grab everything: css / inlined images
       "--no-parent \\" + # don't go to parent level
@@ -67,15 +69,15 @@ class Static
     # Rename twitter_widgets.js?v=e9dd6f695b => twitter_widgets.js
     # Rename jquery.fitvids.js?v=e9dd6f695b => jquery.fitvids.js
     # Rename index.js?v=e9dd6f695b => index.js    
-    Dir.glob(File.join(SiteConfig.get_local_location(name), "**", "*")).each { |f|
-      if File.file?(f)
-        if f =~ /.*?(\?.*)/
-          new_name = f.sub(/\?.*/, '')
-          puts "Renamed: #{f} => #{new_name}"
-          File.rename(f, new_name)
-        end
-      end
-    }
+    # Dir.glob(File.join(SiteConfig.get_local_location(name), "**", "*")).each { |f|
+    #   if File.file?(f)
+    #     if f =~ /.*?(\?.*)/
+    #       new_name = f.sub(/\?.*/, '')
+    #       puts "Renamed: #{f} => #{new_name}"
+    #       File.rename(f, new_name)
+    #     end
+    #   end
+    # }
   end
   
   def self.preview(name)
