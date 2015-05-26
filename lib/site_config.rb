@@ -47,7 +47,7 @@ class SiteConfig
 
   private
   def self.save_config(sites)
-    File.open(CONFIG_FILE, 'w') { |f| f.write(JSON.generate(sites))}
+    File.open(CONFIG_FILE, 'w') { |f| f.write(JSON.pretty_generate(sites))}
   end
 
   private
