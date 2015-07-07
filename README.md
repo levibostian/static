@@ -41,7 +41,8 @@ Use this command to check out what static can do: `ruby lib/main.rb -h`
 
 ## Requirements
 
-* wget: Use `brew install wget` to install wget on your Mac.
+* [the ruby programming language](https://www.ruby-lang.org/en/documentation/installation/)
+* wget: Use `brew install wget` to install wget on your Mac. There are ways to get wget on Windows, I just don't know how and have never tested it. If you figure out a way, make a pull request in here on how to do it. 
   *wget is available by default on most linux distributions.*
   
 * [bundler](http://bundler.io/)
