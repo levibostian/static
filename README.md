@@ -31,6 +31,8 @@ Adds CNAME file to local directory where site is located to allow a custom domai
 
 ## Installation
 
+First, make sure you follow the [requirements](#requirements) section before continuing on!
+
 1. Clone the repo: `git clone git@github.com:levibostian/static.git` 
 2. Go into the root of static: `cd static`. 
 3. Install ruby dependencies: `bundler install`
